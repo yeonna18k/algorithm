@@ -1,16 +1,5 @@
 function solution(dot) {
-    if (dot[0] > 0) {
-        if (dot[1] > 0) {
-            return 1;
-        } else {
-            return 4;
-        }
-    } else {
-        if (dot[1] > 0) {
-            return 2;
-        } else {
-            return 3;
-        }
-    }
-    return;
+    const [dotx, doty] = dot;
+    const multiple = dotx * doty;
+    return multiple > 0 ? (dotx > 0 ? 1 : 3) : (dotx > 0 ? 4 : 2);
 }
