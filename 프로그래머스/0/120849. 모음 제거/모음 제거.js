@@ -1,3 +1,4 @@
 function solution(my_string) {
-    return [...my_string].filter(s => ["a", "e", "i", "o", "u"].indexOf(s) < 0).join("");
+    var answer = '';
+    return my_string.replace(/[aeiou]/g, "");
 }
