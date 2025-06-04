@@ -1,4 +1,5 @@
 function solution(ingredient) {
+    // 기존 O(n²)의 시간 복잡도: while 안에서 includes를 사용하고, includes로 비교한 문자열을 다시 replace를 이용하여 처음부터 비교하므로 중복 검사가 발생함
 //     let wrapping = true;
 //     const burger = "1231"
 //     let str = ingredient.join("")
@@ -12,6 +13,8 @@ function solution(ingredient) {
 //         wrapping = false
 //         }
 //     }
+    
+    // O(n)의 시간복잡도. ingredient를 한 번 순회하면 끝이기 때문.
     let stack = [];
     let count = 0;
     
