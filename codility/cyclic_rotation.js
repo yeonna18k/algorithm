@@ -1,3 +1,5 @@
+Try 01 (75%)
+
 function solution(A, K) {
     const rotate = A.length % K;
     const shifted = A.splice(-K)
@@ -6,6 +8,7 @@ function solution(A, K) {
 }
 
 ---
+Try 02 (100%)
 
 function solution(A, K) {
     let rotate = K % A.length;
