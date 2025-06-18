@@ -17,7 +17,7 @@ function solution(A, K) {
 
     while (rotate > 0) {
         const last = A.pop();
-        A.splice(0, 0, last)
+        A.unshift(last) // A.splice(0, 0, last)
         rotate--;
     }
 
