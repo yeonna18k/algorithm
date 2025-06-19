@@ -1,3 +1,5 @@
+Try 01 (55%)
+
 function solution(X, Y, D) {
     let current = X;
     let jump = 0;
@@ -8,3 +10,5 @@ function solution(X, Y, D) {
     }
     return jump;
 }
+
+Try 02
