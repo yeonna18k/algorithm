@@ -2,11 +2,11 @@
 01 BinayGap ✔️ 2025.06.18.
 
 ## Lesson 2 Arrays
-02 CyclicRotation </br>
-03 OddOccurrencesInArray
+02 CyclicRotation ✔️ 2025.06.18. </br>
+03 OddOccurrencesInArray ✔️ 2025.06.18.
 
 ## Lesson 3 Time Complexity
-04 FrogJmp</br>
+04 FrogJmp ✔️ 2025.06.19.</br>
 05 PermMissingElem</br>
 06 TapeEquilibrium
 
