@@ -11,4 +11,11 @@ function solution(X, Y, D) {
     return jump;
 }
 
-Try 02
+
+Try 02 (100%)
+
+function solution(X, Y, D) {
+    const distance = Y - X;
+    const jump = Math.ceil(distance  / D);
+    return jump;
+}
