@@ -7,7 +7,7 @@
 
 ## Lesson 3 Time Complexity
 04 FrogJmp ✔️ 2025.06.19.</br>
-05 PermMissingElem</br>
+05 PermMissingElem ✔️ 2025.06.20.</br>
 06 TapeEquilibrium
 
 ## Lesson 4 Counting Elements
