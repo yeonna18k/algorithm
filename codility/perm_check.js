@@ -12,3 +12,14 @@ function solution(A) {
 
     return 0;
 }
+
+---
+
+Try 02 (100%)
+
+function solution(A) {
+    const arr = new Array(A.length).fill(false);
+
+    A.forEach(v => arr[v-1] = true);
+    return arr.some(v => !v) ? 0 : 1;
+}
