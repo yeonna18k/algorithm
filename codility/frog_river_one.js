@@ -25,3 +25,23 @@ function solution(X, A) {
 
     return -1;
 }
+
+---
+
+Try 03 (100%)
+
+function solution(X, A) {
+    const arr = new Array(X + 1).fill(false)
+    let blankLeaves = X;
+
+    for (let i = 0; i < A.length; i ++) {
+        const num = A[i]
+        if (!arr[num]) {
+            arr[num] = true;
+            blankLeaves--;
+        }
+
+        if (blankLeaves === 0) return i;
+    }
+    return -1;
+}
