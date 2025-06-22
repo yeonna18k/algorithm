@@ -11,7 +11,7 @@ function solution(X, Y, D) {
     return jump;
 }
 
-
+---
 Try 02 (100%)
 
 function solution(X, Y, D) {
