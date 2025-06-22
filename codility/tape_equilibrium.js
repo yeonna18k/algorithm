@@ -16,7 +16,7 @@ function solution(A) {
     return min;
 }
 
-
+---
 Try 02 (100%)
 
 function solution(A) {
