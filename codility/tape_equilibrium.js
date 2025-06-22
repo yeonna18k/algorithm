@@ -1,4 +1,4 @@
-Try1 (48%)
+Try 01 (48%)
 
 function solution(A) {
     const sum = A.reduce((acc, cur) => acc + cur, 0)
@@ -17,7 +17,7 @@ function solution(A) {
 }
 
 
-Try2 (100%)
+Try 02 (100%)
 
 function solution(A) {
     let firstPart = A[0];
