@@ -3,19 +3,19 @@
  * @return {number[]}
  */
 var productExceptSelf = function(nums) {
-    const totalMulti = nums.reduce((acc, cur) => acc * cur, 1);
+    const n = nums.length;
+    const result = new Array(n);
 
-    if (totalMulti === 0) {
-        if (nums.join("").split(0).length <= 2) {
-            const idx = nums.indexOf(0);
-            const total = nums.filter(num => num !== 0).reduce((acc, cur) => acc * cur, 1)
-            const arr = new Array(nums.length).fill(0);
-            arr[idx] = total;
-            return arr;
-        } else {
-            return new Array(nums.length).fill(0);
-        }
+    result[0] = 1;
+    for (let i = 1; i < n; i++) {
+        result[i] = nums[i - 1] * result[i - 1]
     }
 
-    return nums.map(num => totalMulti / num)
+    let right = 1;
+    for (let i = n - 1; i >= 0; i--) {
+        result[i] = result[i] * right;
+        right = right * nums[i]
+    }
+
+    return result;
 };
