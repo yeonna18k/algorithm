@@ -4,33 +4,22 @@
  * @return {boolean}
  */
 var isIsomorphic = function(s, t) {
-   if (s.length !== t.length) {
-        return false;
-    }
-    
-    const sToT = new Map();
-    const tToS = new Map();
-    
+    const map = new Map();
+    const tSet = new Set();
+
     for (let i = 0; i < s.length; i++) {
-        const charS = s[i];
-        const charT = t[i];
-        
-        if (sToT.has(charS)) {
-            if (sToT.get(charS) !== charT) {
+        if (!map.has(s[i])) {
+            if (tSet.has(t[i])) {
                 return false;
             }
+            map.set(s[i], t[i]);
+            tSet.add(t[i])
         } else {
-            sToT.set(charS, charT);
-        }
-        
-        if (tToS.has(charT)) {
-            if (tToS.get(charT) !== charS) {
+            if (map.get(s[i]) !== t[i]) {
                 return false;
-            }
-        } else {
-            tToS.set(charT, charS);
+            } 
         }
     }
-    
+
     return true;
 };
