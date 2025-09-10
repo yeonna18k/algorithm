@@ -4,25 +4,25 @@
  * @return {number[]}
  */
 var intersect = function(nums1, nums2) {
-    // O(n log n) 의 시간복잡도 
+    const map = new Map();
     const result = [];
+    const sArr = nums1.length < nums2.length ? nums1 : nums2;
+    const lArr = nums1.length < nums2.length ? nums2 : nums1;
 
-    nums1.sort((a, b) => a - b);
-    nums2.sort((a, b) => a - b);
+    for (let i = 0; i < sArr.length; i++) {
+        map.set(sArr[i], map.get(sArr[i]) + 1 || 0)
+    }
 
-    let i = 0;
-    let j = 0;
-
-    while (i < nums1.length && j < nums2.length) {
-        if (nums1[i] === nums2[j]) {
-            result.push(nums1[i])
-            i++;
-            j++;
-        } else if (nums1[i] < nums2[j]) {
-            i++;
-        } else {
-            j++;
+    for (let i = 0; i < lArr.length; i++) {
+        if (map.has(lArr[i])) {
+            result.push(lArr[i])
+            if (map.get(lArr[i]) > 0) {
+                map.set(lArr[i], map.get(lArr[i]) - 1)
+            } else {
+                map.delete(lArr[i])
+            }
         }
+        if (map.size === 0) return result;
     }
     return result;
 };
