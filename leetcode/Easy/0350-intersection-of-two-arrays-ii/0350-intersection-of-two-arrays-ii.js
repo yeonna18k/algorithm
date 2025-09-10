@@ -4,6 +4,7 @@
  * @return {number[]}
  */
 var intersect = function(nums1, nums2) {
+    // O(n log n) 의 시간복잡도 
     const result = [];
 
     nums1.sort((a, b) => a - b);
