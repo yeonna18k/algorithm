@@ -8,9 +8,9 @@ var titleToNumber = function(columnTitle) {
 
     for (let i = 0; i < columnTitle.length; i++) {
         const char = columnTitle[i];
-        const charValue = char.charCodeAt(0) - baseCode + 1
+        const value = char.charCodeAt(0) - baseCode + 1
 
-        result = (result * 26) + charValue
+        result = (result * 26) + value
     }
 
     return result;
